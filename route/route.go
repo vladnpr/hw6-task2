@@ -20,10 +20,10 @@ func (r *Route) ShowVehicles() {
 	}
 }
 
-func (r *Route) Travel(route *Route) {
+func (r *Route) Travel() {
 	fmt.Println("Подорож розпочалась!")
 
-	for _, vehicle := range route.vehicles {
+	for _, vehicle := range r.vehicles {
 		vehicle.Move()
 		vehicle.ChangeSpeed(100)
 		vehicle.BoardPassengers(10)
